@@ -30,7 +30,7 @@ func handler(data: [String:Any]) throws -> RequestHandler {
 		// Respond with a simple message.
 		response.setHeader(.contentType, value: "text/html")
         let lunch = Lunch()
-        
+//
 		response.appendBody(string: "\(lunch.randomRestaurant)")
 		// Ensure that response.completed() is called when your processing is done.
 		response.completed()
