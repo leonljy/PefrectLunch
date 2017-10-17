@@ -38,6 +38,8 @@ TDD 스터디의 연장으로 TDD를 적용하여 간단한 서비스 개발
 	- [x] Delete one
 	- [x] Patch one
 	- [x] random fetch
+	
+## 6회차
 - [ ] 식당이 중복될 경우 처리
 - [ ] Slack 연동
 
