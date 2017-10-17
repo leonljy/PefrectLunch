@@ -31,10 +31,15 @@ TDD 스터디의 연장으로 TDD를 적용하여 간단한 서비스 개발
 - [x] Lunch 클래스에서 CRUD
 
 ## 5회차
+- [x] Restful API 엔드포인트
+	- [x] Fetch all
+	- [x] Add one
+	- [x] Fetch one
+	- [x] Delete one
+	- [x] Patch one
 - [ ] 식당이 중복될 경우 처리
 - [ ] Lunch의 items 접근성 수정
 - [ ] 없는 식당을 수정 할 때 처리
-- [ ] Restful API 엔드포인트
 - [ ] Slack 연동
 - [ ] 랜덤테스트 개선을 해야됨
 
