@@ -37,11 +37,10 @@ TDD 스터디의 연장으로 TDD를 적용하여 간단한 서비스 개발
 	- [x] Fetch one
 	- [x] Delete one
 	- [x] Patch one
+	- [x] random fetch
 - [ ] 식당이 중복될 경우 처리
-- [ ] Lunch의 items 접근성 수정
-- [ ] 없는 식당을 수정 할 때 처리
 - [ ] Slack 연동
-- [ ] 랜덤테스트 개선을 해야됨
+
 
 ## 시작하기
 
