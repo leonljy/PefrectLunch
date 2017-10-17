@@ -31,7 +31,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		91151CA41F8CDD6B000E698F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91151CA31F8CDD6B000E698F /* Restaurant.swift */; };
+		9114FC1D1F960F8800501425 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114FC1C1F960F8800501425 /* APITests.swift */; };
+		9114FC1E1F96108E00501425 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114FC1C1F960F8800501425 /* APITests.swift */; };
+		9114FC221F9618BF00501425 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114FC1F1F9615D700501425 /* RestaurantController.swift */; };
 		91151CA51F8CDD6B000E698F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91151CA31F8CDD6B000E698F /* Restaurant.swift */; };
 		9166336A1F8CD6DB00F8DED6 /* PerfectLunchLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916633691F8CD6DB00F8DED6 /* PerfectLunchLibrary.swift */; };
 		9166336E1F8CD75F00F8DED6 /* PerfectLunchLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916633691F8CD6DB00F8DED6 /* PerfectLunchLibrary.swift */; };
@@ -3553,6 +3555,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9114FC1C1F960F8800501425 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		9114FC1F1F9615D700501425 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		91151CA31F8CDD6B000E698F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		916633691F8CD6DB00F8DED6 /* PerfectLunchLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectLunchLibrary.swift; sourceTree = "<group>"; };
 		9166336F1F8CD7B700F8DED6 /* PathfinderLunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderLunchTests.swift; sourceTree = "<group>"; };
@@ -5141,6 +5145,7 @@
 			isa = PBXGroup;
 			children = (
 				9166336F1F8CD7B700F8DED6 /* PathfinderLunchTests.swift */,
+				9114FC1C1F960F8800501425 /* APITests.swift */,
 				OBJ_22 /* PostControllerTests.swift */,
 				OBJ_23 /* RouteTests.swift */,
 				OBJ_24 /* Utilities.swift */,
@@ -6819,6 +6824,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* PostController.swift */,
+				9114FC1F1F9615D700501425 /* RestaurantController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -8148,6 +8154,7 @@
 			files = (
 				OBJ_1015 /* PostControllerTests.swift in Sources */,
 				OBJ_1016 /* RouteTests.swift in Sources */,
+				9114FC1E1F96108E00501425 /* APITests.swift in Sources */,
 				OBJ_1017 /* Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -8171,6 +8178,7 @@
 			files = (
 				9166336A1F8CD6DB00F8DED6 /* PerfectLunchLibrary.swift in Sources */,
 				OBJ_1159 /* PostController.swift in Sources */,
+				9114FC221F9618BF00501425 /* RestaurantController.swift in Sources */,
 				OBJ_1160 /* Post.swift in Sources */,
 				91151CA51F8CDD6B000E698F /* Restaurant.swift in Sources */,
 				OBJ_1161 /* Routes.swift in Sources */,
@@ -8941,10 +8949,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				91151CA41F8CDD6B000E698F /* Restaurant.swift in Sources */,
 				916633701F8CD7B700F8DED6 /* PathfinderLunchTests.swift in Sources */,
 				9166336E1F8CD75F00F8DED6 /* PerfectLunchLibrary.swift in Sources */,
 				OBJ_795 /* Package.swift in Sources */,
+				9114FC1D1F960F8800501425 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

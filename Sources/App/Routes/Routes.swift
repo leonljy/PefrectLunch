@@ -2,10 +2,8 @@ import Vapor
 
 extension Droplet {
     func setupRoutes() throws {
-        get("hello") { req in
-            var json = JSON()
-            try json.set("hello", "world")
-            return json
+        get("restaurants/random") { req in
+            return try Restaurant.all().random!.makeJSON()
         }
 
         get("plaintext") { req in
@@ -20,6 +18,12 @@ extension Droplet {
 
         get("description") { req in return req.description }
         
+        get("restaurants") { req in
+            return "Test"
+        }
+        
         try resource("posts", PostController.self)
+        
+        try resource("restaurants", RestaurantController.self)
     }
 }

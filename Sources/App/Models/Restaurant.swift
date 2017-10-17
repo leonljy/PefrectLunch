@@ -66,3 +66,30 @@ extension Restaurant: Equatable, CustomStringConvertible, Hashable {
 
 }
 
+extension Restaurant: JSONConvertible {
+    
+    convenience init(json: JSON) throws {
+        self.init(
+            name: try json.get(Restaurant.Keys.name)
+        )
+    }
+    
+    func makeJSON() throws -> JSON {
+        var json = JSON()
+        try json.set(Restaurant.Keys.name, name)
+        try json.set(Restaurant.Keys.id, id)
+        return json
+    }
+}
+
+extension Restaurant: Updateable {
+    public static var updateableKeys: [UpdateableKey<Restaurant>] {
+        return [
+            UpdateableKey(Restaurant.Keys.name, String.self) { restaurant, name in
+                restaurant.name = name
+            }
+        ]
+    }
+}
+
+
