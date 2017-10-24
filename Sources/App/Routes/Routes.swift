@@ -3,7 +3,10 @@ import Vapor
 extension Droplet {
     func setupRoutes() throws {
         get("restaurants/random") { req in
-            return try Restaurant.all().random!.makeJSON()
+            guard let randomRestaurant = try Restaurant.all().random else {
+                throw Abort(.noContent)
+            }
+            return try randomRestaurant.makeJSON()
         }
 
         get("plaintext") { req in

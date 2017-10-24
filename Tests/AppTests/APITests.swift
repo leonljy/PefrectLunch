@@ -90,14 +90,17 @@ class APITests: TestCase {
     }
     
     func testRandom() throws {
-        guard let restaurantOne = try storeNewRestaurant(), let idOne = restaurantOne.id?.int else {
-            XCTFail()
-            return
-        }
+        try storeNewRestaurant()
         try drop
             .testResponse(to: .get, at: "restaurants/random")
             .assertStatus(is: .ok)
             .assertJSON("name", equals: "NC푸코")
+    }
+    
+    func testEmpty() throws {
+        try drop
+            .testResponse(to: .get, at: "restaurants/random")
+            .assertStatus(is: .noContent)
     }
     
     override func tearDown() {
