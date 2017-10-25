@@ -103,6 +103,25 @@ class APITests: TestCase {
             .assertStatus(is: .noContent)
     }
     
+    func testDuplicated() throws {
+        let req = Request.makeTest(method: .post)
+        req.json = try JSON(node: ["name": "개화"])
+        let res = try controller.store(req).makeResponse()
+        let json = res.json
+        let newId: Int? = try json?.get("id")
+        
+        let req2 = Request.makeTest(method: .post)
+        req2.json = try JSON(node: ["name": "개화"])
+        let res2 = try controller.store(req).makeResponse()
+        let json2 = res2.json
+        let oldId: Int? = try json2?.get("id")
+        
+        XCTAssertNotNil(newId)
+        XCTAssertNotNil(oldId)
+        XCTAssertEqual(newId, oldId)
+        XCTAssertEqual(res2.status, .conflict)
+    }
+    
     override func tearDown() {
         super.tearDown()
         try? Restaurant.all().forEach({

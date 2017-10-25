@@ -15,9 +15,14 @@ final class RestaurantController: ResourceRepresentable {
     }
     
     func store(_ req: Request) throws -> ResponseRepresentable {
-        let post = try req.restaurant()
-        try post.save()
-        return post
+        let restaurant = try req.restaurant()
+        
+        if let exist = try Restaurant.makeQuery().filter("name", restaurant.name).first() {
+            return try Response(status: .conflict, json: try exist.makeJSON())
+        } else {
+            try restaurant.save()
+            return restaurant
+        }
     }
     
     func show(_ req: Request, restaurant: Restaurant) throws -> ResponseRepresentable {
